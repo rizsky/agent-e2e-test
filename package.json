@@ -4,12 +4,13 @@
   "description": "An example for Cypress and Cucumber usage",
   "main": "index.js",
   "scripts": {
-    "test-1": "./node_modules/",
-    "cypress:open:dev": "CYPRESS_ENV=development npm run cypress:open",
+    "open": "./node_modules/.bin/cypress open",
+    "cy:run": "./node_modules/.bin/cypress run",
+    "cypress:open:dev": "ENV_STAGE=development npm run cypress:open",
     "cypress:open": "cypress open",
-    "test:dev": "CYPRESS_ENV=development npm run test",
+    "test:dev": "ENV_STAGE=development npm run test",
     "test": "cypress run --env TAGS='@Login' --spec 'cypress/integration/**/*.feature'",
-    "test:debug:dev": "CYPRESS_ENV=development npm run test:debug",
+    "test:debug:dev": "ENV_STAGE=development npm run test:debug",
     "test:debug": "cypress run --headed --browser chrome --env TAGS='@e2e-test' --spec 'cypress/integration/**/*.feature'",
     "test:pull-features": "git submodule update --remote gherkin-features && cp -rf gherkin-features/* cypress/integration && node ./scripts/remove-old-features.js"
   },
