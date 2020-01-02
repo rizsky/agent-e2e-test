@@ -1,0 +1,12 @@
+{
+  "baseUrl": "https://cmsdev.big-agent.xyz",
+  "ignoreTestFiles": ["*.js", "*.md"],
+  "viewportWidth": 1440,
+  "viewportHeight": 900,
+  "chromeWebSecurity": false,
+  "projectId": "cfjsef",
+  "reporter": "junit",
+  "reporterOptions": {
+    "mochaFile": "test-results/test-output-[hash].xml"
+  }
+}

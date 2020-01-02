@@ -1,0 +1,33 @@
+{
+  "root": true,
+  "parserOptions": {
+    "parser": "babel-eslint",
+    "sourceType": "module"
+  },
+  "extends": ["airbnb-base", "plugin:prettier/recommended", "prettier"],
+  "rules": {
+    "quotes": ["error", "single"],
+    "import/prefer-default-export": 0,
+    "linebreak-style": 0,
+    "eslint linebreak-style": [0, "error", "windows"],
+    "no-console": 0,
+    "camelcase": [
+      "error",
+      {
+        "properties": "never",
+        "ignoreDestructuring": true
+      }
+    ]
+  },
+  "env": {
+    "commonjs": true,
+    "node": true,
+    "mocha": true
+  },
+  "globals": {
+    "expect": true,
+    "sinon": true,
+    "cy": true,
+    "Cypress": true
+  }
+}
